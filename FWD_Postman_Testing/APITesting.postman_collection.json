@@ -1,0 +1,1335 @@
+{
+	"info": {
+		"_postman_id": "7fedda6f-655e-49d8-80a1-f206a4628054",
+		"name": "APITesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetMethod",
+			"item": [
+				{
+					"name": "Count_userId_1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(1, 21))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(21, 41))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=2",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(41, 61))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=3",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(61, 81))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=4",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(81, 101))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=5",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(101, 121))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=6",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_7",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(121, 141))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=7",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(141, 161))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=8",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(161, 181))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=9",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count_userId_10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 20 records\"] = list === 20;\r",
+									"\r",
+									"//Check id is in list of value\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.test(\"Expected id is in list of value\", function () {\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"        pm.expect(jsonData[index].id).to.be.oneOf(_.range(181, 201))\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=10",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_data_incorrect_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"responseJson = JSON.parse(responseBody);\r",
+									"var list = responseJson.length;\r",
+									"tests[\"Expected 0 records\"] = list === 0;\r",
+									"\r",
+									"pm.test(\"Body not found userId\", function () \r",
+									"{\r",
+									"    pm.expect(pm.response.text()).to.not.include(\"userId\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?id=201",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "201"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CheckAllProperties",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"tests[\"userId is exist\"] = jsonData.userId !== null ;\r",
+									"\r",
+									"tests[\"id is exist\"] = jsonData.id !== null ;\r",
+									"\r",
+									"tests[\"title is exist\"] = jsonData.title !== null ;\r",
+									"\r",
+									"tests[\"completed is exist\"] = jsonData.completed !== null ;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestCompletedStatus",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									"\r",
+									"\r",
+									"//parsing the Response body to a variable\r",
+									"    responseJson = JSON.parse(responseBody);\r",
+									"\r",
+									"//Finding the length of the Response Array\r",
+									"    var list = responseJson.length;\r",
+									"    console.log(list);\r",
+									"    tests[\"Validate service retuns 200 records\"] = list === 200;\r",
+									"    \r",
+									"    \r",
+									"\r",
+									"\r",
+									"//Finding the completed status\r",
+									"\r",
+									"\r",
+									"pm.test(\"Validate Completed value\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    for (var index = 0; index <jsonData.length; index++){\r",
+									"    pm.expect(jsonData[index].completed).to.be.oneOf([true, false]);\r",
+									"\r",
+									"    }\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "TestAuthentication",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200",
+									"",
+									"",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Test Authenticated Status\"] = jsonData.authenticated === true;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestAuthentication_No_user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 401\"] = responseCode.code === 401",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestAuthentication_No_password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 401\"] = responseCode.code === 401",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestAuthentication_No_user_password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 401\"] = responseCode.code === 401",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestAuthentication_Incorrect_user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 401\"] = responseCode.code === 401",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Test",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestAuthentication_Incorrect_password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 401\"] = responseCode.code === 401",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic dXNlcjpwYXNz"
+							}
+						],
+						"url": {
+							"raw": "http://httpbin.org/basic-auth/user/pass",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"basic-auth",
+								"user",
+								"pass"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostMethod",
+			"item": [
+				{
+					"name": "TestPostMethod",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Status return successfully",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"",
+									"//Response header is correct",
+									"var ContentData = postman.getResponseHeader(\"Content-Type\");",
+									"tests[\"Response Header is present\"] = postman.getResponseHeader(\"Content-Type\") ;",
+									"",
+									"",
+									"pm.test(\"Response Header is correct\", function () {",
+									"   pm.response.to.have.header(\"Content-Type\");",
+									"   pm.response.to.be.header(\"Content-Type\", \"application/json\");",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"//Response body contains specific properties",
+									"tests[\"Body matches string id\"] = responseBody.has(\"id\");",
+									"tests[\"Body matches string userId\"] = responseBody.has(\"userId\");",
+									"tests[\"Body matches string title\"] = responseBody.has(\"title\");",
+									"tests[\"Body matches string completed\"] = responseBody.has(\"completed\");",
+									"",
+									"//Response body match with string",
+									"pm.test(\"Body matches string id value\", function () {",
+									"   pm.expect(pm.response.json().json.id).to.be.eql(201);",
+									"});",
+									"",
+									"pm.test(\"Body matches string userId value\", function () {",
+									"   pm.expect(pm.response.json().json.userId).to.be.eql(11);",
+									"});",
+									"",
+									"pm.test(\"Body matches string title value\", function () {",
+									"   pm.expect(pm.response.json().json.title).to.be.eql(\"Test Post Method\");",
+									"});",
+									"",
+									"pm.test(\"Body matches string completed value\", function () {",
+									"   pm.expect(pm.response.json().json.completed).to.be.eql(true);",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"userId\": 11,\r\n        \"id\": 201,\r\n        \"title\": \"Test Post Method\",\r\n        \"completed\": true\r\n }\r\n"
+						},
+						"url": {
+							"raw": "http://httpbin.org/post",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestPostMethod_Multiple_Value",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Status return successfully",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201]);",
+									"});",
+									"",
+									"",
+									"//Response header is correct",
+									"var ContentData = postman.getResponseHeader(\"Content-Type\");",
+									"tests[\"Response Header is present\"] = postman.getResponseHeader(\"Content-Type\") ;",
+									"",
+									"",
+									"pm.test(\"Response Header is correct\", function () {",
+									"   pm.response.to.have.header(\"Content-Type\");",
+									"   pm.response.to.be.header(\"Content-Type\", \"application/json\");",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"//Response body contains specific properties",
+									"tests[\"Body matches string id\"] = responseBody.has(\"id\");",
+									"tests[\"Body matches string userId\"] = responseBody.has(\"userId\");",
+									"tests[\"Body matches string title\"] = responseBody.has(\"title\");",
+									"tests[\"Body matches string completed\"] = responseBody.has(\"completed\");",
+									"",
+									"//Response body match with string",
+									"pm.test(\"Body matches string userId value\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    for (var index = 0; index <jsonData.json.length; index++){",
+									"    pm.expect(jsonData.json[index].userId).to.be.eql(11)",
+									"",
+									"    }",
+									"});",
+									"",
+									"pm.test(\"Body matches string id value\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    for (var index = 0; index <jsonData.json.length; index++){",
+									"    pm.expect(jsonData.json[index].id).to.be.oneOf([202,203]);",
+									"",
+									"    }",
+									"});",
+									"",
+									"pm.test(\"Body matches string title value\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    for (var index = 0; index <jsonData.json.length; index++){",
+									"    pm.expect(jsonData.json[index].title).to.be.oneOf([\"Test Post Method 202\",\"Test Post Method 203\"]);",
+									"",
+									"    }",
+									"});",
+									"",
+									"pm.test(\"Body matches string completed value\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    for (var index = 0; index <jsonData.json.length; index++){",
+									"    pm.expect(jsonData.json[index].completed).to.be.oneOf([true,false]);",
+									"",
+									"    }",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n        \"userId\": 11,\r\n        \"id\": 202,\r\n        \"title\": \"Test Post Method 202\",\r\n        \"completed\": true\r\n },\r\n {\r\n        \"userId\": 11,\r\n        \"id\": 203,\r\n        \"title\": \"Test Post Method 203\",\r\n        \"completed\": false\r\n }]\r\n\r\n"
+						},
+						"url": {
+							"raw": "http://httpbin.org/post",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestPost_Method_Not_Allowed_Get",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 123454,\r\n  \"description\": \"Test Post Method\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://httpbin.org/post",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestPost_Method_Not_Allowed_Put",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"userId\": 11,\r\n        \"id\": 201,\r\n        \"title\": \"Test Post Method\",\r\n        \"completed\": true\r\n }"
+						},
+						"url": {
+							"raw": "http://httpbin.org/post",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TestPost_Method_Not_Allowed_Patch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 405\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"userId\": 11,\r\n        \"id\": 201,\r\n        \"title\": \"Test Post Method\",\r\n        \"completed\": true\r\n }"
+						},
+						"url": {
+							"raw": "http://httpbin.org/post",
+							"protocol": "http",
+							"host": [
+								"httpbin",
+								"org"
+							],
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
